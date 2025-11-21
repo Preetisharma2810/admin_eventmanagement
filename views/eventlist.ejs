@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+    </head>
+    <body>
+        <div id = "addevent">
+            <h1>UPCOMING EVENT</h1>
+            <div id = "event-list-container">
+            <ul>
+                <% for(let i of Event_List){ %>
+                    <li>
+                      <p><%= i.event%></p>
+                      </div>
+                      <div class = "delete-button-container">
+                        <a href = "/delete-contact/?event=<%= i.event %>">
+                            <button class = "delete-button">DELETE</button>
+                        </a>
+                      </div>
+                      <div class = "view-details-container">
+                        <a href = "/viewdetails/?event=<%=i.event%>">
+                            <button class = "view-details">view-details</button>
+                        </a>
+                      </div>
+                    </li>
+              <% } %>
+            </ul>
+         </div>
+    </body>
+</html>
