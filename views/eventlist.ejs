@@ -11,15 +11,15 @@
             <ul>
                 <% for(let i of Event_List){ %>
                     <li>
-                      <p><%= i.event%></p>
+                      <p><%= i.name%></p>
                       </div>
                       <div class = "delete-button-container">
-                        <a href = "/delete-contact/?event=<%= i.event %>">
+                        <a href = "/delete-contact/?id=<%=i._id%>">
                             <button class = "delete-button">DELETE</button>
                         </a>
                       </div>
                       <div class = "view-details-container">
-                        <a href = "/viewdetails/?event=<%=i.event%>">
+                        <a href = "/viewdetails/?id=<%=i._id%>">
                             <button class = "view-details">view-details</button>
                         </a>
                       </div>

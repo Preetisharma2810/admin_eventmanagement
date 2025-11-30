@@ -1,22 +1,22 @@
 <html>
     <head>
         <title>
-            <%= title %>
+            <%= locals.title %>
         </title>
     </head>
     <body>
         <div id = "login">
-        <form>
+        <form action = "/login" method = "post">
             <h2>LOG-IN</h2>
             <br>
-            <label for = "name">ENTER NAME</label>
+            <label for = "email">ENTER EMAIL</label>
             <br>
-            <input type = "name" placeholder = "ENTER NAME">
+            <input type = "email" name = "email" placeholder = "ENTER EMAIL">
 
             <br>
             <label for = "password">ENTER PASSWORD</label>
             <br>
-            <input type = "password" placeholder = " ENTER PASSWORD">
+            <input type = "password" name = "password" placeholder = " ENTER PASSWORD">
             <br>
             <button id = "log-in">LOG-IN</button> 
         </form>
