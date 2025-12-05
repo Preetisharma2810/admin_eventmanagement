@@ -8,7 +8,7 @@
         <div id = "details">
             <div id = "view-details-container">
                       <p><%= Event_List.name%></p>   
-                      <p><%= Event_List.date%></p>
+                      <p><%= Event_List.date.toLocaleDateString("en-IN")%></p>
                       <p><%= Event_List.time%></p>
                       <p><%= Event_List.venue%></p>
                       <p><%= Event_List.coordinator%></p>

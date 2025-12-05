@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel = "stylesheet" href = "/css/addevent.css">
+    </head>
+    <body>
+        <div id = "add-event-container">
+<form action ="/addevent" method = "post">
+            <input type = "name" name = "name" placeholder = "ENTER EVENT NAME" required>
+            <input type = "date" name = "date" placeholder = "ENTER DATE" required>
+            <input type = "time" name = "time" placeholder = "ENTER TIME" required>
+            <input type = "text" name = "venue" placeholder = "ENTER VENUE" required>
+            <input type = "text" name = "coordinator" placeholder = "COORDINATOR" required>
+            <input type = "text" name = "duration" placeholder = "ENTER DURATION" required>
+            <button type = "submitt">ADD EVENT</button>
+        </form>
+    </div>
+        </body>
+</html>
+
+                     
