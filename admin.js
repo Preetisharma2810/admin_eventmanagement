@@ -165,7 +165,7 @@ app.get('/viewdetails', function(req , res){
     //let _id = req.query.id;
     console.log(req.query.id);
     events.find({_id : req.query.id})
-    .populate('participants','name')
+    .populate('participants','name email rollno')
     .exec()
     .then((detail) => {
         console.log(detail[0].participants);
