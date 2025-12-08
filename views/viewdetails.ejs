@@ -13,6 +13,13 @@
                       <p><%= Event_List.venue%></p>
                       <p><%= Event_List.coordinator%></p>
                       <p><%= Event_List.duration%></p>
+                      <!-- for loop  EVENT_LIST.participants -->
+                       <% for(let i of Event_List.participants){ %>
+                          <p><%= i.name%></p>
+                          <p><%= i.email%></p>
+                          <p><%= i.rollno%></p>
+                      <% } %>
+                      <!-- loop end -->
                     </div>
          </div>
     </body>

@@ -165,14 +165,17 @@ app.get('/viewdetails', function(req , res){
     //let _id = req.query.id;
     console.log(req.query.id);
     events.find({_id : req.query.id})
+    .populate('participants','name')
+    .exec()
     .then((detail) => {
-        console.log(detail);
+        console.log(detail[0].participants);
+        console.log(detail[0].duration);
         return res.render('viewdetails', {
             title : "ViewDetails" ,
             Event_List : detail[0]
         });
     }).catch((error) => {
-        console.error('error getting detail');
+        console.error('error getting detail',error);
         return res.redirect('/eventlist');
     });
 });
