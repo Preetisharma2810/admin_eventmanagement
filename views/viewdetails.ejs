@@ -19,6 +19,13 @@
                           <p><%= i.email%></p>
                           <p><%= i.rollno%></p>
                       <% } %>
+                      <% participants.forEach(item => { %>
+                       <p>participants count: <%= participants.length %></p>
+                      <% participants.forEach(participant => { %>
+                      <span><%= participant %></span>
+                      <% }) %>
+                        <% }) %>
+
                       <!-- loop end -->
                     </div>
          </div>
